@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>edit</title>
+</head>
+<body>
+    <head>
+      <h1>編集</h1>
+    </head>
+    <div role="main">
+      <form action="/edit" method="put">
+        <input type="hidden" name="id" value="<%= mydata.id %>">
+        <table>
+          <tr>
+            <th>English</th>
+            <td><input type="text" name="task" value="<%= mydata.task %>"></td>
+          </tr>
+          <tr>
+            <th>意味</th>
+            <td><input type="text" name="status" value="<%= mydata.status %>"></td>
+          </tr>
+          <tr>
+            <th>Time</th>
+            <td><input type="text" name="status" value="<%= mydata.created_at %>"></td>
+          </tr>
+          
+          <tr>
+            <th></th>
+            <td><input type="submit" value="変更"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <!-- const res = await fetch("http//local:host:3000/wishlist/" + uid, {
+      method: "put",
+      headers: Contact-type:"application/json"},
+
+      body:JSON.stringfy(body)
+    }) -->
+</body>
+</html>

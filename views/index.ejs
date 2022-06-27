@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+
+  <body>
+    <h1><%= title %></h1>
+    <div><a href="/add">新規作成</a></div>
+    <table>
+        <tr>
+          <th>ID</th>
+          <th>English</th>
+          <th  >意味</th>
+         
+          <th></th>
+          <th></th>
+        </tr>
+      <% for(var i in content){ %>
+        <tr>
+            <% var obj = content[i]; %>
+            <td><%= obj.id %></td>
+            <td><%= obj.task %></td>
+            <td class ="span"><%= obj.status %></td>
+            <td>
+              <form action="/edit" method="get">
+                <input type="hidden" name="id" value="<%= obj.id %>">
+                <input type="submit" value="更新">
+            </form>
+            </td>
+            <td>
+              <form action="/delete" method="post">
+                <input type="hidden" name="id" value="<%= obj.id %>">
+                <input type="submit" value="削除">
+              </form>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+    <dic class="aka" >aka</dic>
+  </body>
+
+  <script>
+    document.querySelectorAll(".span").forEach((target) => {
+    target.addEventListener('click',() =>{
+      target.classList.remove('span')
+  })
+  })
+  </script>
+</html>

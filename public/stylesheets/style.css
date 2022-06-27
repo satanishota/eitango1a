@@ -1,0 +1,44 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+table {
+  background-color: #cdefff;  /* 背景色指定 */
+  
+}
+
+th {
+  background-color: #00e2cf;  /* 背景色指定 */
+  
+}
+td {
+  width:  100px;              /* 幅指定 */
+  height: 50px;               /* 高さ指定 */
+}
+.ao{
+  color: #cdefff;
+}
+.span{
+    color: red;
+    width:  200px; 
+}
+th {
+  border: solid 2px;              /* 枠線指定 */
+  text-align:  center;        /* 文字の揃え位置指定 */
+  font-weight:  bold;
+ color: white;
+ font-size: large;
+}
+table th {/*table内のthに対して*/
+  padding: 5px 20px;;/*上下左右10pxずつ*/
+  
+}
+
+table td {/*table内のtdに対して*/
+  padding: 5px 20px;/*上下3pxで左右10px*/
+  
+}
